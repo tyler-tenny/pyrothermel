@@ -1,6 +1,7 @@
-from setuptools import setup, Extension, find_packages
+from setuptools import Extension, find_packages
 from setuptools.command.build_ext import build_ext
 import glob
+from skbuild import setup
 
 class get_pybind_include(object):
     """Helper class to determine the pybind11 include path"""
@@ -55,4 +56,6 @@ setup(
     ],
     cmdclass={'build_ext': build_ext},
     zip_safe=False,
+    cmake_args=[
+        "-DCMAKE_BUILD_TYPE=Release"],
 )
