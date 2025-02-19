@@ -23,8 +23,8 @@ ext_modules = [
             get_pybind_include(user=True),
             'pybind11/include',
             'src/behave',
-	extra_compile_args=['-std=c++11'],
         ],
+	extra_compile_args=['-std=c++11'],
         language='c++',
     ),
 ]
